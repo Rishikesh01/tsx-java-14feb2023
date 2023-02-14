@@ -2,8 +2,9 @@
 
 # How run?
 
-- build the jar file first `` ./gradlew bootJar ``
-- now run the jar file `` java -jar build/libs/tsx-java-14feb2023-0.0.1-SNAPSHOT.jar ``
+- Build the jar file first `` ./gradlew bootJar ``
+- Now run the jar file `` java -jar build/libs/tsx-java-14feb2023-0.0.1-SNAPSHOT.jar ``
+- Now run `` ngrok http 8080``
 
 # How to test/use?
 
