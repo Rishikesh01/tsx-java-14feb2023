@@ -12,13 +12,13 @@ import java.util.logging.Logger;
 @Service
 public class LoggingService {
     private final Logger logger = Logger.getLogger("GitHub");
-   private final FileHandler fh = new FileHandler("C:/temp/test/MyLogFile.log");
 
-    public LoggingService() throws IOException {
-    }
+
 
     public void log(String payload) throws IOException {
         HashMap<String,Object> mapping = new ObjectMapper().readValue(payload, HashMap.class);
+        final FileHandler fh = new FileHandler("C:/temp/test/MyLogFile.log");
+
         logger.addHandler(fh);
         if(mapping.containsKey("pusher")) {
             logger.info("push:"+payload);
